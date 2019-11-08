@@ -31,6 +31,16 @@
         <v-row justify="center">
           <v-col cols="12" class="py-2">
             <v-row justify="center" align="center">
+              <span>Der Vortrag entsprach meinen Erwartungen</span>
+              <v-rating class="mb-10" v-model="rating[0]" size="64" />
+
+              <span>Es war einfach dem Coding zu folgen</span>
+              <v-rating class="mb-10" v-model="rating[1]" size="64" />
+
+              <span>Ich habe mich abgeholt gefühlt</span>
+              <v-rating v-model="rating[2]" size="64" />
+
+              <v-btn color="primary" outlined class="mt-10">Bewerten</v-btn>
             </v-row>
           </v-col>
         </v-row>
@@ -43,7 +53,7 @@
 export default {
   name: "App",
   data: () => ({
-    //
+    rating: []
   })
 };
 </script>
