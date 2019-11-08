@@ -1,16 +1,30 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary">
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
           contain
           src="./assets/logo.png"
           transition="scale-transition"
           width="100"
         />
       </div>
+      <v-spacer></v-spacer>
+      <v-btn
+        href="https://github.com/SmartsquareGmbH/vuetiful-rating"
+        target="_blank"
+        small
+        fab
+        elevation="4"
+        color="transparent"
+      >
+        <v-img
+          contain
+          src="./assets/github.png"
+          transition="scale-transition"
+          width="0"
+        />
+      </v-btn>
     </v-app-bar>
     <v-content>
       <v-container fill-height>
