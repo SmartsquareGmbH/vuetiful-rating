@@ -11,6 +11,7 @@
     "core-js": "^3.3.2",
     "firebase": "^7.3.0",
     "vue": "^2.6.10",
+    "vuefire": "^2.2.0-alpha.0",
     "vuetify": "^2.1.0"
   },
   "devDependencies": {
