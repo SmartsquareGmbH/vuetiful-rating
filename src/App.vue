@@ -10,6 +10,8 @@
       <v-container fill-height>
         <v-row justify="center">
           <v-col cols="12" class="py-2">
+            <thanking v-show="voted"></thanking>
+
             <rating @submit="store"></rating>
           </v-col>
         </v-row>
@@ -25,19 +27,24 @@ import { firestore } from "./plugins/firebase";
 import SmartsquareLogo from "./components/SmartsquareLogo";
 import ErrorSnackbar from "./components/ErrorSnackbar";
 import GithubLogo from "./components/GithubLogo";
+import Thanking from "./components/Thanking";
 import Rating from "./components/Rating";
 
 export default {
-  components: { ErrorSnackbar, Rating, GithubLogo, SmartsquareLogo },
+  components: { ErrorSnackbar, Rating, GithubLogo, SmartsquareLogo, Thanking },
   data: () => ({
+    voted: false,
+    saving: true,
     errorSnackbar: false
   }),
   methods: {
     store(rating) {
+      this.saving = true;
+
       firestore
         .collection("/ratings")
         .add(rating)
-        .then(() => (this.errorSnackbar = true))
+        .then(() => (this.voted = true))
         .catch(() => (this.errorSnackbar = true));
     }
   }

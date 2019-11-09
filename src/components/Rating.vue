@@ -1,5 +1,5 @@
-<template
-  ><v-row justify="center" align="center">
+<template >
+  <v-row justify="center" align="center">
     <span>Der Vortrag entsprach meinen Erwartungen</span>
     <v-rating class="mb-10" v-model="expected" size="64" />
 

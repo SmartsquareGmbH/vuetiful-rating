@@ -1,0 +1,32 @@
+<svg width="100%" height="100%" viewBox="0 0 100 121" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M.2 0h25v71.6H.2z"/>
+        <path id="c" d="M0 0h13.1v71.7H.1z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M50 108A50 50 0 1 0 50 8a50 50 0 0 0 0 100" fill="#DAECF3" fill-rule="nonzero"/>
+        <path d="M39.7 51.8s-4 0-5.6 3.8l-8.7 21.7H29s3.8 0 5.8-3.7l5.7-10.7-.9-11z" fill="#B7C533" fill-rule="nonzero"/>
+        <path d="M59.2 62.5l5.9 11c2 3.8 5.8 3.8 5.8 3.8h3.7L66 55.6c-1.6-3.8-5.6-3.8-5.6-3.8l-1 10.7z" fill="#95B12B" fill-rule="nonzero"/>
+        <g transform="translate(37.3)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path d="M25.2 25.7C25.2 11.6 16.7.1 12.7.1S.2 11.6.2 25.7c0 3.3 4 46 4 46h17s4-42.7 4-46" fill="#7789A9" fill-rule="nonzero" mask="url(#b)"/>
+        </g>
+        <path d="M50 28.4a5.8 5.8 0 1 0 0-11.7 5.8 5.8 0 0 0 0 11.7" fill="#FEFEFE" fill-rule="nonzero"/>
+        <path d="M50 28.4a5.8 5.8 0 1 0 0-11.7 5.8 5.8 0 0 0 0 11.7z" stroke="#B7C533" stroke-width=".9"/>
+        <path d="M54 74.1l5.3 26.2m-13-26.5l-5.6 27.7" stroke="#FEFEFE" stroke-width=".9" stroke-linecap="round"/>
+        <path d="M72.5 100.3c0-3.6-2.8-6.5-6.3-6.5a6.4 6.4 0 0 0-6.3 6.5v.2c-.8-.3-1.6-.5-2.4-.5a8 8 0 0 0-7.1 4.4 9.5 9.5 0 0 0-7.2-3.4c-1 0-1.8.2-2.7.4-.6-3-3.1-5.1-6.2-5.1a6.4 6.4 0 0 0-6.3 6.4c0 3.4 2.5 6.1 5.7 6.5l-.1 1.6c0 5.5 4.3 9.9 9.6 9.9 4 0 7.5-2.6 8.9-6.2a8 8 0 0 0 5.4 2.1 8.2 8.2 0 0 0 7.9-9.9l.8.1c3.5 0 6.3-2.9 6.3-6.5" fill="#FEFEFE" fill-rule="nonzero"/>
+        <g transform="translate(49.3)">
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <path d="M0 71.7h9.2s4-42.7 4-46C13.1 11.6 4.5.1.5.1" fill-opacity=".4" fill="#1B224A" fill-rule="nonzero" mask="url(#d)"/>
+        </g>
+        <path d="M50 51.5v26.2" stroke="#95B12B" stroke-width=".9"/>
+        <path d="M49.1 51.5v26.2" stroke="#CAD36E" stroke-width=".9"/>
+        <g fill="#A7B2C7" fill-rule="nonzero">
+            <path d="M38.5 118a7.9 7.9 0 0 0 11.8-10.2v1.3a10.2 10.2 0 0 1-11.8 9m14.5-4a7.2 7.2 0 0 0 11.8-4.6c.2-1.7-.2-3.4-1.1-4.8v1.1a9.3 9.3 0 0 1-10.7 8.3m11.6-8.7c1 .5 2 .7 3 .6a5 5 0 0 0 2.7-8.8l.2.8a6.6 6.6 0 0 1-6 7.4m-32.2 2.4c1 .5 2.2.7 3.3.6a5.6 5.6 0 0 0 3-9.8l.2.9a7.3 7.3 0 0 1-6.5 8.3"/>
+        </g>
+    </g>
+</svg>
