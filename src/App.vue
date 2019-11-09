@@ -1,55 +1,16 @@
 <template>
   <v-app>
     <v-app-bar app color="primary">
-      <div class="d-flex align-center">
-        <v-img
-          contain
-          src="./assets/logo.png"
-          transition="scale-transition"
-          width="100"
-        />
-      </div>
+      <smartsquare-logo></smartsquare-logo>
       <v-spacer></v-spacer>
-      <v-btn
-        href="https://github.com/SmartsquareGmbH/vuetiful-rating"
-        target="_blank"
-        small
-        fab
-        elevation="4"
-        color="transparent"
-      >
-        <v-img
-          contain
-          src="./assets/github.png"
-          transition="scale-transition"
-          width="0"
-        />
-      </v-btn>
+      <github-logo></github-logo>
     </v-app-bar>
 
     <v-content>
       <v-container fill-height>
         <v-row justify="center">
           <v-col cols="12" class="py-2">
-            <v-row justify="center" align="center">
-              <span>Der Vortrag entsprach meinen Erwartungen</span>
-              <v-rating class="mb-10" v-model="expected" size="64" />
-
-              <span>Es war einfach dem Coding zu folgen</span>
-              <v-rating class="mb-10" v-model="comprehensible" size="64" />
-
-              <span>Ich habe mich abgeholt gefühlt</span>
-              <v-rating v-model="carryover" size="64" />
-
-              <v-btn
-                class="mt-10"
-                color="primary"
-                @click="submitRating"
-                outlined
-              >
-                Bewerten
-              </v-btn>
-            </v-row>
+            <rating @submit="store"></rating>
           </v-col>
         </v-row>
       </v-container>
@@ -61,25 +22,22 @@
 
 <script>
 import { firestore } from "./plugins/firebase";
+import SmartsquareLogo from "./components/SmartsquareLogo";
 import ErrorSnackbar from "./components/ErrorSnackbar";
+import GithubLogo from "./components/GithubLogo";
+import Rating from "./components/Rating";
 
 export default {
-  components: { ErrorSnackbar },
+  components: { ErrorSnackbar, Rating, GithubLogo, SmartsquareLogo },
   data: () => ({
-    expected: 0,
-    comprehensible: 0,
-    carryover: 0,
     errorSnackbar: false
   }),
   methods: {
-    submitRating() {
+    store(rating) {
       firestore
         .collection("/ratings")
-        .add({
-          expected: this.expected,
-          comprehensible: this.comprehensible,
-          carryover: this.carryover
-        })
+        .add(rating)
+        .then(() => (this.errorSnackbar = true))
         .catch(() => (this.errorSnackbar = true));
     }
   }
