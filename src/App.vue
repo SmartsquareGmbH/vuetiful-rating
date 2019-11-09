@@ -43,7 +43,7 @@ export default {
 
       firestore
         .collection("/ratings")
-        .add(rating)
+        .add(Object.assign({ timestamp: new Date() }, rating))
         .then(() => (this.voted = true))
         .catch(() => (this.errorSnackbar = true));
     }
