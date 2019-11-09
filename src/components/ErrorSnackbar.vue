@@ -3,13 +3,15 @@
     Irgendwas ist schief gelaufen 🤔
     <v-btn icon @click="visible = false">
       <v-icon>
-        mdi-close
+        {{ mdiClose }}
       </v-icon>
     </v-btn>
   </v-snackbar>
 </template>
 
 <script>
+import { mdiClose } from "@mdi/js";
+
 export default {
   props: {
     value: {
@@ -17,6 +19,7 @@ export default {
       default: () => false
     }
   },
+  data: () => ({ mdiClose }),
   computed: {
     visible: {
       get: function() {
