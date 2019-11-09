@@ -53,23 +53,26 @@
           </v-col>
         </v-row>
       </v-container>
+
+      <error-snackbar v-model="errorSnackbar"></error-snackbar>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import { firestore } from "./plugins/firebase";
+import ErrorSnackbar from "./components/ErrorSnackbar";
 
 export default {
-  name: "App",
+  components: { ErrorSnackbar },
   data: () => ({
     expected: 0,
     comprehensible: 0,
-    carryover: 0
+    carryover: 0,
+    errorSnackbar: false
   }),
   methods: {
     submitRating() {
-      console.log(this);
       firestore
         .collection("/ratings")
         .add({
@@ -77,8 +80,7 @@ export default {
           comprehensible: this.comprehensible,
           carryover: this.carryover
         })
-        .then(() => console.log("yay"))
-        .catch(e => console.error(e));
+        .catch(() => (this.errorSnackbar = true));
     }
   }
 };
