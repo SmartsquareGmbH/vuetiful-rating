@@ -7,17 +7,17 @@
     <v-row justify="center" class="primary--text subtitle-1">
       <span>Der Vortrag entsprach meinen Erwartungen</span>
       <v-chip class="mt-2 mb-5" x-large outlined color="accent">
-        <v-rating v-model="expected" class="mb-10" size="64" />
+        <v-rating v-model="expected" full-icon="mdi-star" empty-icon="mdi-star" size="48" />
       </v-chip>
 
       <span>Es war einfach dem Coding zu folgen</span>
       <v-chip class="mt-2 mb-5" x-large outlined color="accent">
-        <v-rating v-model="comprehensible" class="mb-10" size="64" />
+        <v-rating v-model="comprehensible" full-icon="mdi-star" empty-icon="mdi-star" size="48" />
       </v-chip>
 
       <span>Ich habe mich abgeholt gefühlt</span>
       <v-chip class="mt-2 mb-5" x-large outlined color="accent">
-        <v-rating v-model="carryover" size="64" />
+        <v-rating v-model="carryover" full-icon="mdi-rocket" empty-icon="mdi-rocket" size="48" />
       </v-chip>
 
       <v-btn class="mt-5" color="primary" @click="submit">
