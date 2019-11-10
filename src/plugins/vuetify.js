@@ -1,24 +1,24 @@
-import Vue from "vue";
-import Vuetify from "vuetify/lib";
-import de from "vuetify/es5/locale/de";
+import Vue from "vue"
+import Vuetify from "vuetify/lib"
+import de from "vuetify/es5/locale/de"
 
-Vue.use(Vuetify);
+Vue.use(Vuetify)
 
 export default new Vuetify({
   lang: {
     locales: { de },
-    current: "de"
+    current: "de",
   },
   icons: {
-    iconfont: "mdiSvg"
+    iconfont: "mdiSvg",
   },
   theme: {
     themes: {
       light: {
         primary: "#556B93",
-        secondary: "#DAEBF3",
-        accent: "#B7C533"
-      }
-    }
-  }
-});
+        secondary: "#B7C533",
+        accent: "#DAEBF3",
+      },
+    },
+  },
+})
