@@ -7,11 +7,6 @@
     elevation="4"
     color="transparent"
   >
-    <v-img
-      contain
-      src="../assets/github.png"
-      transition="scale-transition"
-      width="0"
-    />
+    <v-img contain src="../assets/github.png" transition="scale-transition" width="0" />
   </v-btn>
 </template>

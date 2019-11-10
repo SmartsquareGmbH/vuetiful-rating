@@ -10,25 +10,25 @@
 </template>
 
 <script>
-import { mdiClose } from "@mdi/js";
+import { mdiClose } from "@mdi/js"
 
 export default {
   props: {
     value: {
       type: Boolean,
-      default: () => false
-    }
+      default: () => false,
+    },
   },
   data: () => ({ mdiClose }),
   computed: {
     visible: {
       get: function() {
-        return this.value;
+        return this.value
       },
       set: function(value) {
-        this.$emit("input", value);
-      }
-    }
-  }
-};
+        this.$emit("input", value)
+      },
+    },
+  },
+}
 </script>

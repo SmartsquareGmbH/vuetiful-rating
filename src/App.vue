@@ -23,30 +23,30 @@
 </template>
 
 <script>
-import { firestore } from "./plugins/firebase";
-import SmartsquareLogo from "./components/SmartsquareLogo";
-import ErrorSnackbar from "./components/ErrorSnackbar";
-import GithubLogo from "./components/GithubLogo";
-import Thanking from "./components/Thanking";
-import Rating from "./components/Rating";
+import { firestore } from "./plugins/firebase"
+import SmartsquareLogo from "./components/SmartsquareLogo"
+import ErrorSnackbar from "./components/ErrorSnackbar"
+import GithubLogo from "./components/GithubLogo"
+import Thanking from "./components/Thanking"
+import Rating from "./components/Rating"
 
 export default {
   components: { ErrorSnackbar, Rating, GithubLogo, SmartsquareLogo, Thanking },
   data: () => ({
     voted: false,
     saving: true,
-    errorSnackbar: false
+    errorSnackbar: false,
   }),
   methods: {
     store(rating) {
-      this.saving = true;
+      this.saving = true
 
       firestore
         .collection("/ratings")
         .add(Object.assign({ timestamp: new Date() }, rating))
         .then(() => (this.voted = true))
-        .catch(() => (this.errorSnackbar = true));
-    }
-  }
-};
+        .catch(() => (this.errorSnackbar = true))
+    },
+  },
+}
 </script>
