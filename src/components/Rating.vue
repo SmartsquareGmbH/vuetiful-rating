@@ -20,7 +20,7 @@
         <v-rating v-model="carryover" full-icon="mdi-rocket" empty-icon="mdi-rocket" size="48" />
       </v-chip>
 
-      <v-btn class="mt-5" color="primary" @click="submit">
+      <v-btn class="mt-5" color="primary" @click="submit" :loading="saving">
         Bewerten
       </v-btn>
     </v-row>
@@ -28,11 +28,14 @@
 </template>
 
 <script>
+import { firestore } from "../plugins/firebase"
+
 export default {
   data: () => ({
     expected: 3,
     comprehensible: 3,
     carryover: 3,
+    saving: false,
   }),
   computed: {
     emotion() {
@@ -47,11 +50,19 @@ export default {
   },
   methods: {
     submit() {
-      this.$emit("submit", {
-        expected: this.expected,
-        comprehensible: this.comprehensible,
-        carryover: this.carryover,
-      })
+      this.saving = true
+
+      firestore
+        .collection("/ratings")
+        .add({
+          expected: this.expected,
+          comprehensible: this.comprehensible,
+          carryover: this.carryover,
+          timestamp: new Date(),
+        })
+        .then(() => (this.saving = false))
+        .then(() => this.$emit("saved"))
+        .catch(() => this.$emit("error"))
     },
   },
 }
