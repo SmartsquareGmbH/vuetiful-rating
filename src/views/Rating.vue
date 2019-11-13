@@ -20,7 +20,7 @@
         <v-rating v-model="carryover" full-icon="mdi-rocket" empty-icon="mdi-rocket" size="48" />
       </v-chip>
 
-      <v-btn class="mt-5" color="primary" @click="submit" :loading="saving">
+      <v-btn class="mt-5" color="primary" :loading="saving" @click="submit">
         Bewerten
       </v-btn>
     </v-row>
