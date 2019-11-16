@@ -27,7 +27,7 @@ import SmartsquareLogo from "./components/static/SmartsquareLogo"
 import ErrorSnackbar from "./components/static/ErrorSnackbar"
 import GithubLogo from "./components/static/GithubLogo"
 import Thanking from "./components/static/Thanking"
-import Rating from "./views/Rating"
+import Rating from "./views/rating/Rating"
 
 export default {
   components: { ErrorSnackbar, Rating, GithubLogo, SmartsquareLogo, Thanking },
