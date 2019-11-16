@@ -23,10 +23,10 @@
 </template>
 
 <script>
-import SmartsquareLogo from "./components/SmartsquareLogo"
-import ErrorSnackbar from "./components/ErrorSnackbar"
-import GithubLogo from "./components/GithubLogo"
-import Thanking from "./components/Thanking"
+import SmartsquareLogo from "./components/static/SmartsquareLogo"
+import ErrorSnackbar from "./components/static/ErrorSnackbar"
+import GithubLogo from "./components/static/GithubLogo"
+import Thanking from "./components/static/Thanking"
 import Rating from "./views/Rating"
 
 export default {
