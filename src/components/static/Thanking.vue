@@ -3,7 +3,7 @@
     <v-row align="center">
       <v-col>
         <!-- TODO: Replace with waving men vector-->
-        <v-img src="../assets/rocket.svg" transition="scale-transition" />
+        <v-img src="../../assets/rocket.svg" transition="scale-transition" />
       </v-col>
       <v-col>
         <span class="display-3">Danke</span>
