@@ -11,8 +11,12 @@ export default {
   name: "VColCentered",
   props: {
     cols: {
-      type: String,
-      default: () => "12",
+      type: [String, Number],
+      default: () => 12,
+      validator: (it) => {
+        if (it === "auto") return true
+        else return it >= 1 && it <= 12
+      },
     },
   },
 }
