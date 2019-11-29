@@ -1,23 +1,23 @@
 <template>
   <v-app>
     <v-app-bar app color="primary">
-      <smartsquare-logo></smartsquare-logo>
-      <v-spacer></v-spacer>
-      <github-logo></github-logo>
+      <smartsquare-logo />
+      <v-spacer />
+      <github-logo />
     </v-app-bar>
 
     <v-content>
       <v-container fill-height>
         <v-row justify="center">
           <v-col cols="12" class="py-2">
-            <thanking v-show="voted"></thanking>
+            <thanking v-show="voted" />
 
-            <rating @saved="voted = true" @error="errorSnackbar = true"></rating>
+            <rating @saved="voted = true" @error="errorSnackbar = true" />
           </v-col>
         </v-row>
       </v-container>
 
-      <error-snackbar v-model="errorSnackbar"></error-snackbar>
+      <error-snackbar v-model="errorSnackbar" />
     </v-content>
   </v-app>
 </template>
