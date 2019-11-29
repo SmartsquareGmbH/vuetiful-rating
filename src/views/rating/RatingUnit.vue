@@ -29,7 +29,7 @@ export default {
         return this.rating
       },
       set(rating) {
-        this.$emit("rating", rating)
+        this.$emit("update:rating", rating)
       },
     },
   },
