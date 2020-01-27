@@ -37,14 +37,15 @@ export default {
     saving: false,
   }),
   computed: {
+    ratingSum() {
+      return this.ratings.reduce((acc, current) => acc + current.value, 0)
+    },
     emotion() {
-      const ratingSum = this.ratings[0].value + this.ratings[1].value + this.ratings[2].value
-
-      if (ratingSum === 3) return "poop"
-      if (ratingSum <= 6) return "sad"
-      if (ratingSum >= 13) return "excited"
-      if (ratingSum >= 10) return "happy"
-      return "neutral"
+      if (this.ratingSum === 3) return "poop"
+      else if (this.ratingSum <= 6) return "sad"
+      else if (this.ratingSum >= 13) return "excited"
+      else if (this.ratingSum >= 10) return "happy"
+      else return "neutral"
     },
   },
   methods: {
