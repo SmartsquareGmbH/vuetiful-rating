@@ -8,7 +8,7 @@
 
     <v-content>
       <v-container fill-height>
-        <v-row justify="center">
+        <v-row justify="center" class="ma-0">
           <v-col cols="12" class="py-2">
             <thanking v-show="voted" />
 
